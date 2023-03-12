@@ -2,7 +2,6 @@ import path from "path";
 import { Exception } from "../Exceptions/Exception";
 import { ExceptionHandler } from "../Exceptions/Handler/ExceptionHandler";
 import { ExceptionHandlerInterface } from "../Exceptions/interfaces/ExceptionHandlerInterface";
-import { ResolverException } from "../Exceptions/ResolverException";
 import { Resolver } from "../Resolver/Resolver";
 import { ScraperConfigInterface } from "./interfaces/Scraper";
 
