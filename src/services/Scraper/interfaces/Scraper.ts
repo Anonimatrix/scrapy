@@ -1,3 +1,4 @@
+import { ExceptionHandlerInterface } from "../../Exceptions/interfaces/ExceptionHandlerInterface";
 import { ProcessorInterface } from "../../Processors/interfaces/ProcessorInterface";
 import { Registable } from "../../Resolver/Resolver";
 import { UploaderInterface } from "../../Uploaders/interfaces/UploaderInterface";
@@ -9,6 +10,7 @@ export interface ScraperConfigInterface<T extends object> {
   uploaders: Instantiable<UploaderInterface>[];
   processors: Instantiable<ProcessorInterface<T>>[];
   scrapers: Instantiable<PageScraperInterface<T>>[];
-  services: Instantiable<any>[];
-  providers: Registable[];
+  services?: Instantiable<any>[];
+  providers?: Registable[];
+  exceptionHandler?: Instantiable<ExceptionHandlerInterface>;
 }
