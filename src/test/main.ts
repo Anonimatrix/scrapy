@@ -25,5 +25,5 @@ import { UserInterface } from "./userInterface";
 
   const scraper = new Scraper(config);
 
-  await scraper.init();
+  await scraper.run();
 })();

@@ -15,7 +15,11 @@ export class Scraper<T extends object> {
       : new ExceptionHandler();
   }
 
-  public async init() {
+  /**
+   * Initialize the scraper
+   * @returns { Promise<void> } Resolve when the scraper is done
+   */
+  public async run() {
     try {
       await this.resolver();
       await this.scrap();
@@ -28,7 +32,7 @@ export class Scraper<T extends object> {
     }
   }
 
-  public async resolver() {
+  private async resolver() {
     const { services, providers } = this.config;
 
     // Register the providers
@@ -42,7 +46,7 @@ export class Scraper<T extends object> {
     });
   }
 
-  public async scrap() {
+  private async scrap() {
     const { scrapers } = this.config;
     const results: T[] = [];
 
@@ -57,13 +61,14 @@ export class Scraper<T extends object> {
     this.results = results;
   }
 
-  public async upload() {
+  private async upload() {
     const { processors, uploaders } = this.config;
     const results = this.results;
 
     for (const processor of processors) {
       const processorInstance = Resolver.resolve(processor);
       const processed = await processorInstance.process(results);
+      if (!processed) continue;
       for (const uploader of uploaders) {
         const uploaderInstance = Resolver.resolve(uploader);
         await uploaderInstance.upload(

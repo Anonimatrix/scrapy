@@ -7,5 +7,5 @@ export interface ProcessorInterface<T extends object> {
    * @param { T[] } data
    * @returns { Promise<Readable> }
    */
-  process: (data: T[]) => Promise<Readable>;
+  process: (data: T[]) => Promise<Readable | null>;
 }
