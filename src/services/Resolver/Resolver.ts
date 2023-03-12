@@ -7,6 +7,7 @@ import {
   isValueProvider,
   ValueProvider,
 } from "tsyringe";
+import { ResolverException } from "../Exceptions/ResolverException";
 
 export type Registable = {
   [key: string]: ValueProvider<unknown> | ClassProvider<unknown>;
@@ -14,7 +15,14 @@ export type Registable = {
 
 export class Resolver {
   static resolve<T>(target: InjectionToken<T>): T {
-    return container.resolve(target);
+    try {
+      return container.resolve(target);
+    } catch (e) {
+      throw new ResolverException(
+        `Could not resolve ${String(target)})} 
+        Make sure that the class has the @injectable() decorator and that the provider is registered.`
+      );
+    }
   }
 
   static register(registers: Registable): void {
