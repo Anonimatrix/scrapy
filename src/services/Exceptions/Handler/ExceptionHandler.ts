@@ -1,5 +1,7 @@
-import { ExceptionHandlerInterface } from "../interfaces/ExceptionHandlerInterface";
-import { Exception } from "../Exception";
+import {
+  Exception,
+  ExceptionHandlerInterface,
+} from "@xkairo/scrapy-interfaces";
 
 export class ExceptionHandler implements ExceptionHandlerInterface {
   handle(exception: Exception): void {

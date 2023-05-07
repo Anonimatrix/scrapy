@@ -1,15 +1,38 @@
 {
-  "name": "scrapy",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "@xkairo/scrapy",
+  "version": "0.1",
+  "description": "Framework to scrape data from web pages",
+  "main": "dist/main.js",
+  "files": [
+    "dist"
+  ],
+  "typings": "index.d.ts",
   "scripts": {
     "lint:fix": "eslint --ext .ts . --fix",
     "lint": "eslint --ext .ts .",
     "build": "tsc",
-    "start": "tsc && node dist/main.js"
+    "start": "tsc && node dist/main.js",
+    "test": "jest --verbose --runInBand --detectOpenHandles --forceExit"
   },
-  "keywords": [],
+  "keywords": [
+    "scrapy",
+    "scraping",
+    "web scraping",
+    "crawler",
+    "web crawler",
+    "puppeteer",
+    "puppeteer-extra",
+    "typescript",
+    "tsyringe",
+    "objects-to-csv",
+    "csv",
+    "json",
+    "jsonl",
+    "jsonlines",
+    "json",
+    "scraper",
+    "scrap"
+  ],
   "author": "Ezequiel Imaz <tavelliezequiel@gmail.com>",
   "license": "MIT",
   "devDependencies": {
@@ -25,6 +48,7 @@
     "typescript": "^4.9.5"
   },
   "dependencies": {
+    "@xkairo/scrapy-interfaces": "^0.2.0",
     "dotenv": "^16.0.3",
     "objects-to-csv": "^1.3.6",
     "puppeteer": "^19.7.2",

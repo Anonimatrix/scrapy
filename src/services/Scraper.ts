@@ -1,9 +1,11 @@
+import {
+  Exception,
+  ExceptionHandlerInterface,
+  ScraperConfigInterface,
+} from "@xkairo/scrapy-interfaces";
 import path from "path";
-import { Exception } from "../Exceptions/Exception";
-import { ExceptionHandler } from "../Exceptions/Handler/ExceptionHandler";
-import { ExceptionHandlerInterface } from "../Exceptions/interfaces/ExceptionHandlerInterface";
-import { Resolver } from "../Resolver/Resolver";
-import { ScraperConfigInterface } from "./interfaces/Scraper";
+import { ExceptionHandler } from "./Exceptions/Handler/ExceptionHandler";
+import { Resolver } from "./Resolver/Resolver";
 
 export class Scraper<T extends object> {
   private results: T[] = [];

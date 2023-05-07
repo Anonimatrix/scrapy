@@ -1,17 +1,12 @@
+import { Registable } from "@xkairo/scrapy-interfaces";
 import "reflect-metadata";
-import { container } from "tsyringe";
 import {
-  ClassProvider,
+  container,
   InjectionToken,
   isClassProvider,
   isValueProvider,
-  ValueProvider,
 } from "tsyringe";
 import { ResolverException } from "../Exceptions/ResolverException";
-
-export type Registable = {
-  [key: string]: ValueProvider<unknown> | ClassProvider<unknown>;
-};
 
 export class Resolver {
   static resolve<T>(target: InjectionToken<T>): T {

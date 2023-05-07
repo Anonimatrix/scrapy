@@ -1,5 +1,5 @@
+import { PageScraperInterface } from "@xkairo/scrapy-interfaces";
 import { injectable } from "tsyringe";
-import { PageScraperInterface } from "../services/Scraper/interfaces/PageScraperInterface";
 import { UserInterface } from "./userInterface";
 
 @injectable()

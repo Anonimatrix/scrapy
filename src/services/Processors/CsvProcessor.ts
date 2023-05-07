@@ -1,7 +1,7 @@
-import { ProcessorInterface } from "./interfaces/ProcessorInterface";
-import { Readable } from "stream";
-import ObjectToCsv from "objects-to-csv";
+import { ProcessorInterface } from "@xkairo/scrapy-interfaces";
 import fs from "fs";
+import ObjectToCsv from "objects-to-csv";
+import { Readable } from "stream";
 import { injectable } from "tsyringe";
 
 const tmpPath = "./tmp.csv";
