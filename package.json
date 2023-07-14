@@ -6,7 +6,7 @@
   "files": [
     "dist"
   ],
-  "typings": "index.d.ts",
+  "typings": "main.d.ts",
   "scripts": {
     "lint:fix": "eslint --ext .ts . --fix",
     "lint": "eslint --ext .ts .",
