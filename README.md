@@ -153,7 +153,9 @@ Estos son los encargados de proveer la funcionalidad necesaria para el scraper, 
 
 #### Puppeteer
 
-Este es un servicio que provee la funcionalidad de puppeteer. Permite el uso de plugins de *puppeteer-extra-plugin* y unicamente es una capa sobre el modulo de puppeteer. Este servicio es el que se usa en el ejemplo de uso.
+En anteriores versiones este servicio se encontraba incluido en la version base. Debido a un peso innecesario en caso de no utilizarlo se decidio extraerlo a otra libreria [Scrapy Puppeteer Plugin](https://github.com/Anonimatrix/scrapy-puppeteer-plugin)
+
+Scrapy Puppeteer Plugin provee la funcionalidad de puppeteer. Permite el uso de plugins de *puppeteer-extra-plugin* y unicamente es una capa sobre el modulo de puppeteer.
 
 ## Manejo de errores
 
