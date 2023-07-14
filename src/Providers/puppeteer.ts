@@ -1,4 +1,4 @@
-import { Registable } from "../services/Resolver/Resolver";
+import { Registable } from "@xkairo/scrapy-interfaces";
 
 export const puppeteerProvider: Registable = {
   plugins: {
