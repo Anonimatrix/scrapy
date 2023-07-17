@@ -1,9 +1,7 @@
 import { ScraperConfigInterface } from "@xkairo/scrapy-interfaces";
 import { existsSync, readFileSync, rmSync } from "fs";
 import { join } from "path";
-import { Puppeteer } from "puppeteer";
 import "reflect-metadata";
-import { puppeteerProvider } from "../../src/Providers/puppeteer";
 import { ExceptionHandler } from "../../src/services/Exceptions/Handler/ExceptionHandler";
 import { CsvProcessor } from "../../src/services/Processors/CsvProcessor";
 import { Scraper } from "../../src/services/Scraper";
@@ -18,9 +16,7 @@ describe("Scraper", () => {
       uploaders: [LocalUploader],
       processors: [CsvProcessor],
       scrapers: [PageScraper],
-      services: [Puppeteer],
       providers: [
-        puppeteerProvider,
         {
           filepath: {
             useValue: filepath,
