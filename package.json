@@ -1,6 +1,6 @@
 {
   "name": "@xkairo/scrapy",
-  "version": "0.2.2",
+  "version": "0.2.5",
   "description": "Framework to scrape data from web pages",
   "main": "dist/main.js",
   "files": [
@@ -48,7 +48,7 @@
     "typescript": "^4.9.5"
   },
   "dependencies": {
-    "@xkairo/scrapy-interfaces": "^0.2.0",
+    "@xkairo/scrapy-interfaces": "^0.2.5",
     "dotenv": "^16.0.3",
     "objects-to-csv": "^1.3.6",
     "reflect-metadata": "^0.1.13",
