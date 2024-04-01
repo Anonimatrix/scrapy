@@ -13,11 +13,15 @@ Los tipos de modulos son los siguientes:
 Ejemplo basico de scrap:
 
 ```typescript
-    const filepath = join(__dirname, "result.csv");
-    const config: ScraperConfigInterface<UserInterface> = {
-      uploaders: [LocalUploader],
-      processors: [CsvProcessor],
-      scrapers: [PageScraper],
+    import Scraper, { Uploaders, Processors, ExceptionsHandlers } from "@xkairo/scrapy";
+    import path from "path";
+    import { RandomScraper } from "path-to-your-scraper";
+
+    const filepath = path.join(__dirname, "result.csv");
+    const config = {
+      uploaders: [Uploaders.LocalUploader],
+      processors: [Processors.CsvProcessor],
+      scrapers: [RandomScraper],
       services: [Puppeteer],
       providers: [
         puppeteerProvider,

@@ -1,6 +1,6 @@
 {
   "name": "@xkairo/scrapy",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "Framework to scrape data from web pages",
   "main": "dist/main.js",
   "files": [
